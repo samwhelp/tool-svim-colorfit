@@ -19,8 +19,9 @@ augroup END
 
 
 " ## key map
-nnoremap <leader>g :call Svim#ColorFit#toggleBackgroundTransparent()<CR>
-nnoremap <leader>b :call Svim#ColorFit#toggleBackgroundDarkLight()<CR>
+"nnoremap <Bslash>g :call Svim#ColorFit#toggleBackgroundTransparent()<CR>
+nnoremap <Bslash>t :call Svim#ColorFit#toggleBackgroundTransparent()<CR>
+nnoremap <Bslash>b :call Svim#ColorFit#toggleBackgroundDarkLight()<CR>
 
 " ## call this for colorscheme load before this plugin
 call Svim#ColorFit#fixColor()
