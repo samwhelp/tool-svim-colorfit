@@ -4,28 +4,28 @@
 """ Head: Main
 ""
 
-function! Svim#ColorFit#Scheme#Gruvbox#fixColor () abort
+function! Svim#ColorFit#Scheme#Gruvbox#FixColor () abort
 
 
-	call Svim#ColorFit#Scheme#Gruvbox#hlCursorLine()
-	"call Svim#ColorFit#Scheme#Gruvbox#hlCursorLineAndColumn()
-	call Svim#ColorFit#Scheme#Gruvbox#hlLineNumber()
-	call Svim#ColorFit#Scheme#Gruvbox#hlVertSplit()
-	call Svim#ColorFit#Scheme#Gruvbox#hlStatusLine()
-	call Svim#ColorFit#Scheme#Gruvbox#hlStatusLineTerm()
-	call Svim#ColorFit#Scheme#Gruvbox#hlTabLine()
-	call Svim#ColorFit#Scheme#Gruvbox#hlFold()
-	call Svim#ColorFit#Scheme#Gruvbox#hlBackground()
+	call Svim#ColorFit#Scheme#Gruvbox#HlCursorLine()
+	"call Svim#ColorFit#Scheme#Gruvbox#HlCursorLineAndColumn()
+	call Svim#ColorFit#Scheme#Gruvbox#HlLineNumber()
+	call Svim#ColorFit#Scheme#Gruvbox#HlVertSplit()
+	call Svim#ColorFit#Scheme#Gruvbox#HlStatusLine()
+	call Svim#ColorFit#Scheme#Gruvbox#HlStatusLineTerm()
+	call Svim#ColorFit#Scheme#Gruvbox#HlTabLine()
+	call Svim#ColorFit#Scheme#Gruvbox#HlFold()
+	call Svim#ColorFit#Scheme#Gruvbox#HlBackground()
 
 
 endfunction
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#toggleBackgroundTransparent () abort
-	if 'Colorful' ==# Svim#ColorFit#getCurrentBackgroundColorStatus()
-		call Svim#ColorFit#Scheme#Gruvbox#hlBackgroundTransparent()
+function! Svim#ColorFit#Scheme#Gruvbox#ToggleBackgroundTransparent () abort
+	if 'Colorful' ==# Svim#ColorFit#GetCurrentBackgroundColorStatus()
+		call Svim#ColorFit#Scheme#Gruvbox#HlBackgroundTransparent()
 	else
-		call Svim#ColorFit#Scheme#Gruvbox#hlBackgroundColorful()
+		call Svim#ColorFit#Scheme#Gruvbox#HlBackgroundColorful()
 	endif
 endfunction
 
@@ -40,7 +40,7 @@ endfunction
 """ Head: CursorLine
 ""
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlCursorLine () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlCursorLine () abort
 	"hi CursorLine ctermfg=254 ctermbg=237 cterm=NONE
 	hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
 
@@ -56,7 +56,7 @@ function! Svim#ColorFit#Scheme#Gruvbox#hlCursorLine () abort
 endfunction
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlCursorLineAndColumn () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlCursorLineAndColumn () abort
 	"hi CursorLine ctermfg=254 ctermbg=237 cterm=NONE
 	hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
 	"hi CursorColumn ctermfg=254 ctermbg=237 cterm=NONE
@@ -89,14 +89,14 @@ endfunction
 " SpecialKey     xxx term=bold ctermfg=81 guifg=Cyan
 "
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlBackground () abort
-	call Svim#ColorFit#Scheme#Gruvbox#hlBackgroundColorful()
-	"call Svim#ColorFit#Scheme#Gruvbox#hlBackgroundTransparent()
+function! Svim#ColorFit#Scheme#Gruvbox#HlBackground () abort
+	call Svim#ColorFit#Scheme#Gruvbox#HlBackgroundColorful()
+	"call Svim#ColorFit#Scheme#Gruvbox#HlBackgroundTransparent()
 endfunction
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlBackgroundColorful () abort
-	call Svim#ColorFit#setCurrentBackgroundColorStatus('Colorful')
+function! Svim#ColorFit#Scheme#Gruvbox#HlBackgroundColorful () abort
+	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Colorful')
 	hi Normal ctermfg=223 ctermbg=235 " let background not transparent
 	hi NonText ctermfg=235 ctermbg=235" adjust for [~] (not yet line)
 	hi SpecialKey ctermfg=59
@@ -104,8 +104,8 @@ function! Svim#ColorFit#Scheme#Gruvbox#hlBackgroundColorful () abort
 endfunction
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlBackgroundTransparent () abort
-	call Svim#ColorFit#setCurrentBackgroundColorStatus('Transparent')
+function! Svim#ColorFit#Scheme#Gruvbox#HlBackgroundTransparent () abort
+	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Transparent')
 	hi Normal ctermfg=NONE ctermbg=NONE" let background transparent
 	hi NonText ctermfg=232 ctermbg=NONE" adjust for [~] (not yet line)
 	hi SpecialKey ctermfg=59
@@ -125,7 +125,7 @@ endfunction
 ""
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlLineNumber () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlLineNumber () abort
 	"hi LineNr ctermfg=243 ctermbg=NONE cterm=NONE
 	"hi CursorLineNr ctermfg=214 ctermbg=237 cterm=NONE
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE
@@ -143,7 +143,7 @@ endfunction
 """ Head: VertSplit
 ""
 " VertSplit      xxx term=reverse ctermfg=241 ctermbg=235 guifg=#665c54 guibg=#282828
-function! Svim#ColorFit#Scheme#Gruvbox#hlVertSplit () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlVertSplit () abort
 	"hi VertSplit ctermfg=241 ctermbg=235
 endfunction
 
@@ -163,7 +163,7 @@ endfunction
 
 
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlStatusLine () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlStatusLine () abort
 	hi StatusLine ctermfg=236 ctermbg=223
 	hi StatusLineNC ctermfg=236 ctermbg=246
 	"
@@ -182,7 +182,7 @@ endfunction
 """ Head: TabLine
 ""
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlTabLine () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlTabLine () abort
 	hi TabLine ctermfg=252 ctermbg=242 cterm=NONE
 	hi TabLineSel ctermfg=142 ctermbg=235
 	hi TabLineFill ctermfg=243 ctermbg=238
@@ -203,7 +203,7 @@ endfunction
 """ Head: StatusLineTerm
 ""
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlStatusLineTerm () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlStatusLineTerm () abort
 	"hi StatusLineTerm ctermfg=15 ctermbg=2 cterm=bold
 	"hi StatusLineTermNC ctermfg=15 ctermbg=2
 
@@ -228,7 +228,7 @@ endfunction
 """ Head: Fold
 ""
 
-function! Svim#ColorFit#Scheme#Gruvbox#hlFold () abort
+function! Svim#ColorFit#Scheme#Gruvbox#HlFold () abort
 	hi Folded ctermfg=244 ctermbg=236
 	hi FoldColumn ctermfg=246 ctermbg=236
 endfunction
