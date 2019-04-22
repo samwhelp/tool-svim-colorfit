@@ -129,7 +129,9 @@ function! Svim#ColorFit#Scheme#Gruvbox#HlLineNumber () abort
 	"hi LineNr ctermfg=243 ctermbg=NONE cterm=NONE
 	"hi CursorLineNr ctermfg=214 ctermbg=237 cterm=NONE
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE
-	"hi EndOfBuffer ctermfg=238
+	"hi EndOfBuffer ctermfg=235
+	hi link EndOfBuffer NonText
+	"hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
 endfunction
 
 ""

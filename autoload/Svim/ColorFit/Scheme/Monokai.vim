@@ -125,8 +125,10 @@ function! Svim#ColorFit#Scheme#Monokai#HlLineNumber () abort
 	hi LineNr ctermfg=102 ctermbg=NONE cterm=NONE
 	hi CursorLineNr ctermfg=11 ctermbg=NONE cterm=NONE
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE
-	"hi EndOfBuffer ctermfg=238
+	"hi EndOfBuffer ctermfg=235
+	hi link EndOfBuffer NonText	
 	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
+
 endfunction
 
 ""

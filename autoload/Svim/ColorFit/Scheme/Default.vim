@@ -123,7 +123,9 @@ function! Svim#ColorFit#Scheme#Default#HlLineNumber () abort
 	"hi CursorLineNr ctermfg=11 ctermbg=NONE cterm=NONE
 	"hi NonText ctermfg=232 ctermbg=NONE cterm=NONE
 	"hi EndOfBuffer ctermfg=238
+	hi link EndOfBuffer NonText
 	"hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
+
 endfunction
 
 ""
