@@ -7,15 +7,15 @@
 function! Svim#ColorFit#Scheme#SpaceVimTheme#FixColor () abort
 
 
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLine()
-	""call Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLineAndColumn()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlLineNumber()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlVertSplit()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlStatusLine()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlStatusLineTerm()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlTabLine()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlFold()
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackground()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLine()
+	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLineAndColumn()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlLineNumber()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlVertSplit()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlStatusLine()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlStatusLineTerm()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlTabLine()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlFold()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackground()
 
 
 endfunction
@@ -42,7 +42,8 @@ endfunction
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLine () abort
 	"hi CursorLine ctermfg=254 ctermbg=237 cterm=NONE
-	hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
+	"hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
+	hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
 
 	set cursorline
 	set nocursorcolumn
@@ -58,9 +59,11 @@ endfunction
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlCursorLineAndColumn () abort
 	"hi CursorLine ctermfg=254 ctermbg=237 cterm=NONE
-	hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
+	"hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE
+	hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
 	"hi CursorColumn ctermfg=254 ctermbg=237 cterm=NONE
-	hi CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE
+	"hi CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE
+	hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE
 
 	set cursorline
 	set cursorcolumn
@@ -90,17 +93,23 @@ endfunction
 "
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlBackground () abort
-	call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundColorful()
+	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundColorful()
 	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundTransparent()
 endfunction
 
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundColorful () abort
 	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Colorful')
-	hi Normal ctermfg=223 ctermbg=235 " let background not transparent
+	hi Normal ctermfg=249 ctermbg=235 " let background not transparent
 	hi NonText ctermfg=235 ctermbg=235" adjust for [~] (not yet line)
 	hi SpecialKey ctermfg=59
-	hi VertSplit ctermfg=241 ctermbg=235
+	"hi VertSplit ctermfg=241 ctermbg=235
+	hi VertSplit ctermfg=60 ctermbg=235
+
+	" ## Original
+	"hi Normal ctermfg=249 ctermbg=235
+	"hi NonText ctermfg=239
+	"hi SpecialKey ctermfg=170
 endfunction
 
 
@@ -109,7 +118,8 @@ function! Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundTransparent () abort
 	hi Normal ctermfg=NONE ctermbg=NONE" let background transparent
 	hi NonText ctermfg=232 ctermbg=NONE" adjust for [~] (not yet line)
 	hi SpecialKey ctermfg=59
-	hi VertSplit ctermfg=241 ctermbg=NONE
+	"hi VertSplit ctermfg=241 ctermbg=NONE
+	hi VertSplit ctermfg=60 ctermbg=NONE
 endfunction
 
 
@@ -131,7 +141,14 @@ function! Svim#ColorFit#Scheme#SpaceVimTheme#HlLineNumber () abort
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE
 	"hi EndOfBuffer ctermfg=235
 	hi link EndOfBuffer NonText
-	"hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
+	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
+
+	" ## Original
+	"hi LineNr ctermfg=239
+	"hi CursorLineNr ctermfg=170 ctermbg=234
+	"hi NonText ctermfg=239
+	"hi EndOfBuffer ctermfg=235
+	"hi SpecialKey ctermfg=170
 endfunction
 
 ""
@@ -144,9 +161,14 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Head: VertSplit
 ""
-" VertSplit      xxx term=reverse ctermfg=241 ctermbg=235 guifg=#665c54 guibg=#282828
+
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlVertSplit () abort
 	"hi VertSplit ctermfg=241 ctermbg=235
+	hi VertSplit ctermfg=60 ctermbg=235
+
+	" ## Original
+	"hi VertSplit ctermfg=234 ctermbg=235 term=reverse
+
 endfunction
 
 ""
@@ -166,11 +188,14 @@ endfunction
 
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlStatusLine () abort
-	hi StatusLine ctermfg=236 ctermbg=223
-	hi StatusLineNC ctermfg=236 ctermbg=246
-	"
-	"hi StatusLine ctermfg=239 ctermbg=223
-	"hi StatusLineNC ctermfg=237 ctermbg=246
+	"hi StatusLine ctermfg=236 ctermbg=223
+	"hi StatusLineNC ctermfg=236 ctermbg=246
+
+
+	" ## Original
+	"hi StatusLine ctermfg=140 ctermbg=237
+	"hi StatusLineNC ctermfg=60 ctermbg=236
+
 endfunction
 
 ""
@@ -185,13 +210,21 @@ endfunction
 ""
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlTabLine () abort
-	hi TabLine ctermfg=252 ctermbg=242 cterm=NONE
-	hi TabLineSel ctermfg=142 ctermbg=235
-	hi TabLineFill ctermfg=243 ctermbg=238
+	hi TabLine ctermfg=15 ctermbg=242 cterm=NONE
+	hi TabLineSel ctermfg=70 ctermbg=235
+	hi TabLineFill ctermfg=60 ctermbg=237
 
 	"hi TabLine ctermfg=15 ctermbg=242 cterm=NONE
 	"hi TabLineSel ctermfg=32 ctermbg=235
 	"hi TabLineSel ctermfg=197 ctermbg=235
+
+	" ## Original
+	"hi TabLinectermfg=15 ctermbg=242
+	"hi TabLineSel ctermfg=70 ctermbg=234
+	"hi TabLineFill ctermfg=60 ctermbg=234
+
+
+
 endfunction
 
 ""
@@ -231,8 +264,14 @@ endfunction
 ""
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlFold () abort
-	hi Folded ctermfg=244 ctermbg=236
-	hi FoldColumn ctermfg=246 ctermbg=236
+	"hi Folded ctermfg=244 ctermbg=236
+	"hi FoldColumn ctermfg=246 ctermbg=236
+
+	" ## Original
+	" Folded ctermfg=133 ctermbg=234
+	" FoldColumn ctermfg=170 ctermbg=234
+
+
 endfunction
 
 ""
