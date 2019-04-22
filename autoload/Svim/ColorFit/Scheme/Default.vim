@@ -6,9 +6,9 @@
 
 function! Svim#ColorFit#Scheme#Default#FixColor () abort
 
-	"call Svim#ColorFit#Scheme#Default#HlCursorLine()
+	call Svim#ColorFit#Scheme#Default#HlCursorLine()
 	""call Svim#ColorFit#Scheme#Default#HlCursorLineAndColumn()
-	"call Svim#ColorFit#Scheme#Default#HlLineNumber()
+	call Svim#ColorFit#Scheme#Default#HlLineNumber()
 	"call Svim#ColorFit#Scheme#Default#HlVertSplit()
 	"call Svim#ColorFit#Scheme#Default#HlStatusLine()
 	"call Svim#ColorFit#Scheme#Default#HlStatusLineTerm()

@@ -39,6 +39,10 @@ function! Svim#ColorFit#FixColor () abort
 		endif
 	elseif 'monokai' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Monokai#FixColor()
+	elseif 'space_vim_theme' ==? Svim#ColorFit#GetCurrentColorScheme()
+		if 'dark' ==? Svim#ColorFit#GetCurrentColorBackground()
+			call Svim#ColorFit#Scheme#SpaceVimTheme#FixColor()
+		endif
 	elseif 'pablo' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Basic#FixColor()
 	elseif 'slate' ==? Svim#ColorFit#GetCurrentColorScheme()
@@ -59,6 +63,10 @@ function! Svim#ColorFit#ToggleBackgroundTransparent () abort
 		endif
 	elseif 'monokai' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Monokai#ToggleBackgroundTransparent()
+	elseif 'space_vim_theme' ==? Svim#ColorFit#GetCurrentColorScheme()
+		if 'dark' ==? Svim#ColorFit#GetCurrentColorBackground()
+			call Svim#ColorFit#Scheme#SpaceVimTheme#ToggleBackgroundTransparent()
+		endif
 	elseif 'pablo' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Basic#ToggleBackgroundTransparent()
 	elseif 'slate' ==? Svim#ColorFit#GetCurrentColorScheme()
