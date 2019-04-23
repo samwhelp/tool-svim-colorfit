@@ -43,6 +43,8 @@ function! Svim#ColorFit#FixColor () abort
 		if 'dark' ==? Svim#ColorFit#GetCurrentColorBackground()
 			call Svim#ColorFit#Scheme#SpaceVimTheme#FixColor()
 		endif
+	elseif 'onedark' ==? Svim#ColorFit#GetCurrentColorScheme()
+		call Svim#ColorFit#Scheme#OneDark#FixColor()
 	elseif 'pablo' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Basic#FixColor()
 	elseif 'slate' ==? Svim#ColorFit#GetCurrentColorScheme()
@@ -67,6 +69,8 @@ function! Svim#ColorFit#ToggleBackgroundTransparent () abort
 		if 'dark' ==? Svim#ColorFit#GetCurrentColorBackground()
 			call Svim#ColorFit#Scheme#SpaceVimTheme#ToggleBackgroundTransparent()
 		endif
+	elseif 'onedark' ==? Svim#ColorFit#GetCurrentColorScheme()
+		call Svim#ColorFit#Scheme#OneDark#ToggleBackgroundTransparent()
 	elseif 'pablo' ==? Svim#ColorFit#GetCurrentColorScheme()
 		call Svim#ColorFit#Scheme#Basic#ToggleBackgroundTransparent()
 	elseif 'slate' ==? Svim#ColorFit#GetCurrentColorScheme()
