@@ -99,9 +99,10 @@ function! Svim#ColorFit#Scheme#OneDark#HlBackgroundColorful () abort
 	hi Normal ctermfg=145 ctermbg=235 " let background not transparent
 
 if has('nvim')
-	hi NonText ctermfg=238 ctermbg=235" adjust for [~] (not yet line)
+	hi NonText ctermfg=238 ctermbg=235 " adjust for [~] (not yet line)
+	hi EndOfBuffer ctermfg=235
 else
-	hi NonText ctermfg=235 ctermbg=235" adjust for [~] (not yet line)
+	hi NonText ctermfg=235 ctermbg=235 " adjust for [~] (not yet line)
 endif
 
 	hi SpecialKey ctermfg=238
@@ -118,12 +119,13 @@ endfunction
 
 function! Svim#ColorFit#Scheme#OneDark#HlBackgroundTransparent () abort
 	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Transparent')
-	hi Normal ctermfg=NONE ctermbg=NONE" let background transparent
+	hi Normal ctermfg=NONE ctermbg=NONE " let background transparent
 
 if has('nvim')
-	hi NonText ctermfg=238 ctermbg=NONE" adjust for [~] (not yet line)
+	hi NonText ctermfg=238 ctermbg=NONE " adjust for [~] (not yet line)
+	hi EndOfBuffer ctermfg=235
 else
-	hi NonText ctermfg=235 ctermbg=NONE" adjust for [~] (not yet line)
+	hi NonText ctermfg=235 ctermbg=NONE " adjust for [~] (not yet line)
 endif
 
 	hi SpecialKey ctermfg=59

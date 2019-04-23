@@ -97,7 +97,16 @@ endfunction
 function! Svim#ColorFit#Scheme#Monokai#HlBackgroundColorful () abort
 	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Colorful')
 	hi Normal ctermfg=231 ctermbg=235 " let background not transparent
+
+
+if has('nvim')
+	hi NonText ctermfg=238 ctermbg=235 " adjust for [~] (not yet line)
+	hi EndOfBuffer ctermfg=235
+else
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE " adjust for [~] (not yet line)
+endif
+
+
 	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
 endfunction
 
@@ -105,7 +114,16 @@ endfunction
 function! Svim#ColorFit#Scheme#Monokai#HlBackgroundTransparent () abort
 	call Svim#ColorFit#SetCurrentBackgroundColorStatus('Transparent')
 	hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE " let background transparent
-	hi NonText ctermfg=232 ctermbg=NONE cterm=NONE " adjust for [~] (not yet line)
+
+
+if has('nvim')
+	hi NonText ctermfg=238 ctermbg=NONE " adjust for [~] (not yet line)
+	hi EndOfBuffer ctermfg=235
+else
+	hi NonText ctermfg=235 ctermbg=NONE " adjust for [~] (not yet line)
+endif
+
+
 	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
 endfunction
 
@@ -126,7 +144,7 @@ function! Svim#ColorFit#Scheme#Monokai#HlLineNumber () abort
 	hi CursorLineNr ctermfg=11 ctermbg=NONE cterm=NONE
 	hi NonText ctermfg=235 ctermbg=NONE cterm=NONE
 	"hi EndOfBuffer ctermfg=235
-	hi link EndOfBuffer NonText	
+	hi link EndOfBuffer NonText
 	hi SpecialKey ctermfg=59 ctermbg=NONE cterm=NONE
 
 endfunction
