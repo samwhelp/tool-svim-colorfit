@@ -87,13 +87,9 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Head: Background
 ""
-"Normal         xxx ctermfg=223 ctermbg=235 guifg=#ebdbb2 guibg=#282828
-" NonText        xxx term=bold ctermfg=235 gui=bold guifg=Blue
-" SpecialKey     xxx term=bold ctermfg=81 guifg=Cyan
-"
 
 function! Svim#ColorFit#Scheme#SpaceVimTheme#HlBackground () abort
-	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundColorful()
+	call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundColorful()
 	"call Svim#ColorFit#Scheme#SpaceVimTheme#HlBackgroundTransparent()
 endfunction
 
